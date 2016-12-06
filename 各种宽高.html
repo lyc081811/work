@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>innerHeight:浏览器内的宽高(就是文档的)</li>
+		<li>outerHeight:浏览器外的宽高</li>
+		<li>screen.width:电脑屏幕的宽高</li>
+		<li>screen.availHeight:电脑屏幕<strong>可以显示</strong>的宽高</li>
+		<li>screenLeft:浏览器距离屏幕左侧距离</li>
+		<li>clientWidth:元素的可视部分的宽度和高度(padding+content)[<strong>	确定不包括边框的哦!!!</strong>]</li>
+		<li>clientTop用来读取元素border的宽度和高度
+			<ul>
+				<li>clientTop=borderTop的borderWidth;</li>
+				<li>clientLeft=borderLeft的borderWidth;</li>
+				<li><strong>clientTop,clientLeft就是边框的宽度!!!</strong></li>
+			</ul>
+		</li>
+		<li>offsetWidth=clientWidth+borderWidth;</li>
+		<li>
+			offsetLeft和offsetTop
+			<ul>
+				<li>如果当前元素的父级元素没有进行css定位(position),offsetParent为body,若有,则为最近的父级</li>
+			</ul>
+		</li>
+		<li>其他的以后再说喽</li>
+	</ul>
+	<p style="width:100px;height:100px;background-color:red;border: 10px solid #ccc"></p>
+	<script type="text/javascript">
+		console.log('---有关屏幕或浏览器---')
+		console.log('innerHeight :'+innerHeight)
+		console.log('innerWidth :'+innerWidth)
+		console.log('outerHeight :'+outerHeight)
+		console.log('outerWidth :'+outerWidth)
+		console.log('screen.width:'+screen.width)
+		console.log('screen.height:'+screen.height)
+		console.log('screen.availWidth(可利用的宽度):'+screen.availWidth)
+		console.log('screen.availHeight:'+screen.availHeight)
+		console.log('screenLeft:'+screenLeft)
+		console.log('screenTop:'+screenTop)
+		console.log('---关于document的宽度->client---')
+		var p=document.getElementsByTagName('p')[0].clientTop;
+		// alert(p)
+	</script>
+</body>
+</html>
